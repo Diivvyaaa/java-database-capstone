@@ -1,53 +1,253 @@
-/* this is the style sheet file for index.htlm  */
+/* this is the style sheet file for index.html */
 
-/* 
-**Global Reset (`*`)**
-
-* Remove all default margin and padding.
-* Use `border-box` for sizing to include padding and border in element size.
-
-**Base (`html, body`)**
-
-* Set height to 100% for full viewport layout.
-* Use the `'Roboto'` sans-serif font for modern, clean typography.
-
-**Layout Wrapper (`.wrapper`)**
-
-* Use a vertical flexbox layout.
-* Ensure the wrapper covers at least the full height of the screen (`min-height: 100vh`).
-
-**Heading (`h2`)**
-
-* Set a large font size (`48px`) for prominence.
-* Add a bottom margin of `50px` for spacing.
-* Use a dark teal color (`#003e3e`).
-* Make the font bold and use a blended font stack (`'Alegreya', 'Roboto', sans-serif`) for elegant styling.
-
-**Main Section (`.main-content`)**
-
-* Allow the section to grow to fill space with `flex-grow: 1`.
-* Add `40px` of internal padding.
-* Center content both horizontally and vertically using `justify-content` and `align-items`.
-* Display items in a column direction.
-* Center all text.
-* Apply a full-screen background image with:
-
-  * `cover` size
-  * `center` positioning
-  * no repeat
-  * `fixed` attachment to keep image still during scroll
-
-**Buttons (`button`)**
-
-* Style with a teal green background (`#015c5d`) and white text.
-* Remove borders and round the corners (`12px`).
-* Use `10px 20px` padding and set width to `200px`.
-* Add a top margin of `10px` for spacing.
-* Enable pointer cursor and readable font size (`16px`).
-* On hover, change background color to bold red (`#A62B1F`).
-
-**Dashboard Buttons (`.dashboard-btn`)**
-
-* Use the same base green background (`#015c5d`) as the default button.
-* On hover, darken the background to deep teal (`#003e3e`) for visual feedback.
- */
+/* 1. Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+  }
+  
+  /* 2. Main Wrapper Layout */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* 3. Header Styles */
+  .header,
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  .header .logo img,
+  #header img {
+    height: 45px;
+    width: auto;
+  }
+  
+  .header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .header nav a {
+    text-decoration: none;
+    color: #003e3e;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .header nav a:hover {
+    color: #a62b1f;
+  }
+  
+  /* 4. Main Content Area */
+  .main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    background-image: url('../images/bg/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  /* Heading */
+  .main-content h2 {
+    font-family: 'Alegreya', 'Roboto', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #003e3e;
+    margin-bottom: 50px;
+  }
+  
+  /* Role Selection Container */
+  .role-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* 5. Buttons & Interactivity */
+  button,
+  .btn {
+    background-color: #015c5d;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover,
+  .btn:hover {
+    background-color: #a62b1f;
+  }
+  
+  .dashboard-btn {
+    background-color: #015c5d;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .dashboard-btn:hover {
+    background-color: #003e3e;
+  }
+  
+  /* Input Fields & Dropdowns */
+  .input-field,
+  .select-dropdown {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 14px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .input-field:focus,
+  .select-dropdown:focus {
+    border-color: #015c5d;
+    box-shadow: 0 0 5px rgba(1, 92, 93, 0.4);
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  /* 6. Modal Styles */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  }
+  
+  .close,
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    width: auto;
+    margin-top: 0;
+    padding: 0;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    line-height: 1;
+  }
+  
+  .close:hover,
+  .close-btn:hover {
+    background: transparent;
+    color: #a62b1f;
+  }
+  
+  #modal-body {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* 7. Footer Styles */
+  .footer,
+  #footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    background-color: #003e3e;
+    color: #ffffff;
+    font-size: 14px;
+    gap: 15px;
+  }
+  
+  .footer a,
+  #footer a {
+    color: #e0e0e0;
+    text-decoration: none;
+  }
+  
+  .footer a:hover,
+  #footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .header,
+    #header {
+      flex-direction: column;
+      padding: 15px 20px;
+      gap: 10px;
+    }
+  
+    .main-content h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+  
+    .footer,
+    #footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  }

@@ -59,6 +59,21 @@ Notes:
 Decide how to handle existing appointments of the deleted doctor
 Show a confirmation dialog before deleting
 
+5.As an admin, I want to run a stored procedure in the MySQL CLI to get the number of appointments per month, so that I can track usage statistics.
+
+Acceptance Criteria:
+
+A stored procedure is created in MySQL
+Running it in the MySQL CLI returns appointment count grouped by month
+Months with zero appointments are handled correctly
+
+Priority: Medium
+Story Points: 5
+Notes:
+
+Include the .sql script in the repo
+Consider adding a year parameter
+
 #patient
 
 1.As a patient, I want to sign up using my email and password, so that I can book appointments.

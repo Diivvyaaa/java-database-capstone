@@ -1,14 +1,15 @@
 # User Story Template
+As an admin, I want to log out of the portal, so that system access is protected.
 
-**Title:**
-_As a [user role], I want [feature/goal], so that [reason]._
+Acceptance Criteria:
 
-**Acceptance Criteria:**
-1. [Criteria 1]
-2. [Criteria 2]
-3. [Criteria 3]
+A logout option is visible on the Admin Dashboard
+Clicking logout ends the session/invalidates the token
+After logout, admin pages redirect to the login page
 
-**Priority:** [High/Medium/Low]
-**Story Points:** [Estimated Effort in Points]
-**Notes:**
-- [Additional information or edge cases]
+Priority: High
+Story Points: 2
+Notes:
+
+Back button must not reveal protected pages after logout
+

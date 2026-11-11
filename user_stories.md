@@ -106,7 +106,21 @@ Notes:
 Show an empty state if no prescriptions exist
 Secure the REST endpoint so patients cannot access others’ records
 
+3.As a patient, I want to log in and book an hour-long appointment, so that I can consult with a doctor.
 
+Acceptance Criteria:
+
+Patient can pick a doctor, date and time slot
+Appointment duration is fixed at 1 hour
+Only the doctor’s available slots can be selected
+Booking is saved in MySQL and shown in the patient’s appointments
+
+Priority: High
+Story Points: 8
+Notes:
+
+Prevent double-booking of the same slot
+Past dates must not be bookable
 
 
 

@@ -58,3 +58,53 @@ Notes:
 
 Decide how to handle existing appointments of the deleted doctor
 Show a confirmation dialog before deleting
+
+#patient
+
+1.As a patient, I want to sign up using my email and password, so that I can book appointments.
+
+Acceptance Criteria:
+
+Sign-up form accepts name, email and password
+Email format and password strength are validated
+Duplicate email shows an error
+Successful sign-up creates a Patient record in MySQL
+
+Priority: High
+Story Points: 5
+Notes:
+
+Hash passwords before saving
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

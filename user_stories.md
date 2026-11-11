@@ -28,3 +28,17 @@ Notes:
 Decide how to handle existing appointments of the deleted doctor
 Show a confirmation dialog before deleting'
 
+3.As an admin, I want to add doctors to the portal, so that patients can find and book them.
+
+Acceptance Criteria:
+
+Admin can submit a form with doctor name, specialization, email, phone and password
+Doctor is saved in the MySQL database
+Duplicate email is rejected with a clear message
+
+Priority: High
+Story Points: 5
+Notes:
+
+Validate all required fields
+Only admins can access this action

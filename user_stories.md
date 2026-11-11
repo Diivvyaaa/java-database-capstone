@@ -122,7 +122,20 @@ Notes:
 Prevent double-booking of the same slot
 Past dates must not be bookable
 
+#doctor
+1.As a doctor, I want to log out of the portal, so that my data is protected.
 
+Acceptance Criteria:
+
+Logout option is visible on the Doctor Dashboard
+Session/token is invalidated on logout
+Protected pages redirect to login afterward
+
+Priority: High
+Story Points: 2
+Notes:
+
+Same logout behavior as admin and patient
 
 
 

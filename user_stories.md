@@ -91,6 +91,21 @@ Notes:
 
 Hash passwords before saving
 
+2.As a patient, I want to view my patient record and prescriptions, so that I can keep track of my medical history.
+
+Acceptance Criteria:
+
+Patient can see their past appointments and prescriptions in one place
+Prescriptions are fetched from MongoDB through the PatientRecord REST module
+A patient can only see their own records
+
+Priority: Medium
+Story Points: 5
+Notes:
+
+Show an empty state if no prescriptions exist
+Secure the REST endpoint so patients cannot access others’ records
+
 
 
 

@@ -42,3 +42,19 @@ Notes:
 
 Validate all required fields
 Only admins can access this action
+
+
+4.As an admin, I want to delete a doctor’s profile from the portal, so that inactive or invalid doctors are removed.
+
+Acceptance Criteria:
+
+Admin can select a doctor and confirm deletion
+Doctor record is removed from the MySQL database
+Deleted doctor no longer appears in the patient doctor list
+
+Priority: Medium
+Story Points: 3
+Notes:
+
+Decide how to handle existing appointments of the deleted doctor
+Show a confirmation dialog before deleting

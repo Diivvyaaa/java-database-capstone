@@ -139,7 +139,19 @@ Same logout behavior as admin and patient
 
 
 
+2.As a doctor, I want to view the patient details for my upcoming appointments, so that I can be prepared.
 
+Acceptance Criteria:
+
+Each upcoming appointment links to the patient’s details
+Details include name, age, contact info and previous visits
+Doctor can only see patients who have booked with them
+
+Priority: Medium
+Story Points: 3
+Notes:
+
+Privacy: restrict access to the doctor’s own patients
 
 
 
